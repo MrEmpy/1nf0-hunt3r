@@ -13,4 +13,8 @@
 
 **chmod +x 1nf0_hunt3r.py**
 
-**./1nf0_hunt3r.py**
+**cp 1nf0_hunt3r.py /usr/bin/1nf0_hunt3r**
+
+# [!] EXECUTE:
+
+**1nf0_hunt3r**
