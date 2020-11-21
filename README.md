@@ -13,6 +13,10 @@
 
 **chmod +x 1nf0_hunt3r.py**
 
+**TERMUX:**
+**cp 1nf0_hunt3r.py /data/data/com.termux/files/usr/bin/1nf0_hunt3r
+
+**OTHER:**
 **cp 1nf0_hunt3r.py /usr/bin/1nf0_hunt3r**
 
 # [!] EXECUTE:
