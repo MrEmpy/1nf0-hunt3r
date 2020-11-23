@@ -3,6 +3,10 @@
 
 ![](assets/image-1.png)
 
+# [!] TERMUX TUTORIAL:
+
+**https://www.youtube.com/watch?v=rVUNEve4q2k&t=8s**
+
 # [!] HOW TO INSTALL IN TERMUX:
 
 **git clone https://github.com/MrEmpy/1nf0-hunt3r.git**
