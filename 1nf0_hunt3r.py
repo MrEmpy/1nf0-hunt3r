@@ -13,7 +13,7 @@ def menu():
 
 {Fore.LIGHTRED_EX}          ╔═════════════════════════╗
           ║{Fore.LIGHTWHITE_EX} Tool Created by Mr Empy {Fore.LIGHTRED_EX}║
-          ║{Fore.LIGHTWHITE_EX} Version 1.7             {Fore.LIGHTRED_EX}║
+          ║{Fore.LIGHTWHITE_EX} Version 2.0             {Fore.LIGHTRED_EX}║
           ╚═════════════════════════╝
 {Fore.LIGHTWHITE_EX}https://youtube.co/channel/UCol7qlIUc0o0JKmdrmTWQtA
 
@@ -21,8 +21,9 @@ def menu():
 {Fore.LIGHTRED_EX}[02] {Fore.LIGHTWHITE_EX}Get E-mail
 {Fore.LIGHTRED_EX}[03] {Fore.LIGHTWHITE_EX}Get Information Using Number
 {Fore.LIGHTRED_EX}[04] {Fore.LIGHTWHITE_EX}Get Information Using File Format
-{Fore.LIGHTRED_EX}[05] {Fore.LIGHTWHITE_EX}Get Random Information
-{Fore.LIGHTRED_EX}[06] {Fore.LIGHTWHITE_EX}Get Information Using Custom Dork
+{Fore.LIGHTRED_EX}[05] {Fore.LIGHTWHITE_EX}Get Watched/Commented Videos {Fore.LIGHTRED_EX}[new]
+{Fore.LIGHTRED_EX}[06] {Fore.LIGHTWHITE_EX}Get Random Information
+{Fore.LIGHTRED_EX}[07] {Fore.LIGHTWHITE_EX}Get Information Using Custom Dork
     ''')
     inputt = input('Select: ')
 
@@ -40,10 +41,192 @@ def menu():
         file_format_information()
     if inputt == '5' or inputt == '05':
         print('')
-        random_information()
+        information_Comments_Made()
     if inputt == '6' or inputt == '06':
         print('')
+        random_information()
+    if inputt == '7' or inputt == '07':
+        print('')
         custom_dork()
+
+def information_Comments_Made():
+    search=input('Name or Nick: ')
+    print(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Searching...\n')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:kzclip.com')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:mavuong.com')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:trshow.info')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:ts-parfum.ru')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:ukposts.info')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:ukblow.info')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:brlike.net')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:br-it.info')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:npvideos.info')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:tr-cam.com')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:videomuzik.biz')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:viveos.net')
+    print(f'{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Reference Link: https://www.google.com/search?q=intext:{search}%20inurl:faceclips.net\n')
+
+
+
+    time.sleep(1.5)
+
+    def comments_1():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:kzclip.com')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_2():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:mavuong.com')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_3():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:trshow.info')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_4():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:ts-parfum.ru')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_5():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:ukposts.info')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_6():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:ukblow.info')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_7():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:brlike.net')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_8():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:br-it.info')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_9():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:npvideos.info')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_10():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:tr-cam.com')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_11():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:videomuzik.biz')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_12():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:viveos.net')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    def comments_13():
+        page=requests.get(f'https://www.google.com/search?q=intext:{search} inurl:faceclips.net')
+        soup=BeautifulSoup(page.content, "html.parser")
+        for link in soup.find_all("a", href=re.compile('(?<=/url\?q=)(htt.*://.*)')):
+            result=str(re.split(":(?=http)", link["href"].replace('/url?q=', "")))
+            result_1=result.partition('&')[0].strip()
+            result_2=result_1.replace("['", f'{Fore.LIGHTGREEN_EX}[+]{Fore.LIGHTWHITE_EX} ')
+            result_3=result_2.partition('https://accounts')[0].strip()
+            result_finished=result_3.partition('https://www.google.com')[0].strip()
+            a=str(print(result_finished))
+
+    comments_1()
+    comments_2()
+    comments_3()
+    comments_4()
+    comments_5()
+    comments_6()
+    comments_7()
+    comments_8()
+    comments_9()
+    comments_10()
+    comments_11()
+    comments_12()
+    comments_13()
+
 
 def custom_dork():
     search=input('Dork (ex: intext, inurl): ')
@@ -141,7 +324,7 @@ def number_info():
 
 def email_information():
     search=input('Name or Nick: ')
-    email=input('Email (ex: @gmail.com): ')
+    email=input('Email Domain (ex: @gmail.com): ')
     page=requests.get(f'https://www.google.com/search?q=intext:{search}%20intext:{email}')
     soup=BeautifulSoup(page.content, "html.parser")
     print(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Searching...\n')
