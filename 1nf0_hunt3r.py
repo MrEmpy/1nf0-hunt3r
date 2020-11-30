@@ -212,6 +212,14 @@ def information_Comments_Made():
             result_3=result_2.partition('https://accounts')[0].strip()
             result_finished=result_3.partition('https://www.google.com')[0].strip()
             a=str(print(result_finished))
+            back=input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+            if back == 'y' or back == 'Y':
+                os.system('clear')
+                menu()
+
+            if back == 'n' or back == 'N':
+                break
 
     comments_1()
     comments_2()
