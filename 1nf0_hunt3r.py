@@ -13,8 +13,9 @@ def menu():
 
 {Fore.LIGHTRED_EX}          ╔═════════════════════════╗
           ║{Fore.LIGHTWHITE_EX} Tool Created by Mr Empy {Fore.LIGHTRED_EX}║
-          ║{Fore.LIGHTWHITE_EX} Version 1.5             {Fore.LIGHTRED_EX}║
+          ║{Fore.LIGHTWHITE_EX} Version 1.7             {Fore.LIGHTRED_EX}║
           ╚═════════════════════════╝
+{Fore.LIGHTWHITE_EX}https://youtube.co/channel/UCol7qlIUc0o0JKmdrmTWQtA
 
 {Fore.LIGHTRED_EX}[01] {Fore.LIGHTWHITE_EX}Get Social Networks
 {Fore.LIGHTRED_EX}[02] {Fore.LIGHTWHITE_EX}Get E-mail
@@ -59,11 +60,19 @@ def custom_dork():
         result_3=result_2.partition('https://accounts')[0].strip()
         result_finished=result_3.partition('https://www.google.com')[0].strip()
         a=str(print(result_finished))
+        back = input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+        if back == 'y' or back == 'Y':
+            os.system('clear')
+            menu()
+
+        if back == 'n' or back == 'N':
+            break
 
 def number_info():
-    ddd = input('DDD: ')
-    number = input('Number: ')
-    api = f'http://apilayer.net/api/validate?access_key=3738e7d465176aa0201afd77571a0095&number={ddd}{number}&country_code=&format=1'
+    ddd = input('Country (ex: +55) (without +): ')
+    number = input('Number (with DDD): ')
+    api = f'http://apilayer.net/api/validate?access_key=c8b51f067e89570228c2b430de300d17&number={ddd}{number}&country_code=&format=1'
     info_number=requests.get(api.format(ddd + number)).text
 
     rm_symb_1=info_number.replace("{", "")
@@ -117,6 +126,14 @@ def number_info():
             result_3=result_2.partition('https://accounts')[0].strip()
             result_finished=result_3.partition('https://www.google.com')[0].strip()
             a=str(print(result_finished))
+            back=input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+            if back == 'y' or back == 'Y':
+                os.system('clear')
+                menu()
+
+            if back == 'n' or back == 'N':
+                break
 
     number_search()
     number_search_2()
@@ -138,6 +155,14 @@ def email_information():
         result_3=result_2.partition('https://accounts')[0].strip()
         result_finished=result_3.partition('https://www.google.com')[0].strip()
         a=str(print(result_finished))
+        back=input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+        if back == 'y' or back == 'Y':
+            os.system('clear')
+            menu()
+
+        if back == 'n' or back == 'N':
+            break
 
 def file_format_information():
     search=input('Name or Nick: ')
@@ -155,6 +180,14 @@ def file_format_information():
         result_3=result_2.partition('https://accounts')[0].strip()
         result_finished=result_3.partition('https://www.google.com')[0].strip()
         a=str(print(result_finished))
+        back=input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+        if back == 'y' or back == 'Y':
+            os.system('clear')
+            menu()
+
+        if back == 'n' or back == 'N':
+            break
 
 def social_network_information():
     search = input('Name or Nick: ')
@@ -238,6 +271,14 @@ def social_network_information():
             result_3=result_2.partition('https://accounts')[0].strip()
             result_finished=result_3.partition('https://www.google.com')[0].strip()
             a=str(print(result_finished))
+            back=input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+            if back == 'y' or back == 'Y':
+                os.system('clear')
+                menu()
+
+            if back == 'n' or back == 'N':
+                break
 
     facebook()
     instagram()
@@ -261,6 +302,14 @@ def random_information():
         result_3=result_2.partition('https://accounts')[0].strip()
         result_finished=result_3.partition('https://www.google.com')[0].strip()
         a=str(print(result_finished))
+        back=input(f'\n{Fore.LIGHTBLUE_EX}[*]{Fore.LIGHTWHITE_EX} Back? (Y/n): ')
+
+        if back == 'y' or back == 'Y':
+            os.system('clear')
+            menu()
+
+        if back == 'n' or back == 'N':
+            break
 
 if __name__ == '__main__':
     os.system('clear')
