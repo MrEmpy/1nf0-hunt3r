@@ -5,15 +5,15 @@ from bs4 import BeautifulSoup
 
 def menu():
     print(f'''{Fore.LIGHTRED_EX}
- _        __  ___    _                 _   _____      
-/ |_ __  / _|/ _ \  | |__  _   _ _ __ | |_|___ / _ __ 
+ _        __  ___    _                 _   _____
+/ |_ __  / _|/ _ \  | |__  _   _ _ __ | |_|___ / _ __
 | | '_ \| |_| | | | | '_ \| | | | '_ \| __| |_ \| '__|
-| | | | |  _| |_| | | | | | |_| | | | | |_ ___) | |   
-{Fore.RED}|_|_| |_|_|  \___/  |_| |_|\__,_|_| |_|\__|____/|_|   
+| | | | |  _| |_| | | | | | |_| | | | | |_ ___) | |
+{Fore.RED}|_|_| |_|_|  \___/  |_| |_|\__,_|_| |_|\__|____/|_|
 
 {Fore.LIGHTRED_EX}          ╔═════════════════════════╗
           ║{Fore.LIGHTWHITE_EX} Tool Created by Mr Empy {Fore.LIGHTRED_EX}║
-          ║{Fore.LIGHTWHITE_EX} Version 2.0             {Fore.LIGHTRED_EX}║
+          ║{Fore.LIGHTWHITE_EX} Version 2.1             {Fore.LIGHTRED_EX}║
           ╚═════════════════════════╝
 {Fore.LIGHTWHITE_EX}https://youtube.co/channel/UCol7qlIUc0o0JKmdrmTWQtA
 
@@ -263,7 +263,7 @@ def custom_dork():
 def number_info():
     ddd = input('Country (ex: +55) (without +): ')
     number = input('Number (with DDD): ')
-    api = f'http://apilayer.net/api/validate?access_key=c8b51f067e89570228c2b430de300d17&number={ddd}{number}&country_code=&format=1'
+    api = f'http://apilayer.net/api/validate?access_key=fe5a598969ac2813a2d63ec3cf4f14d2&number={ddd}{number}&country_code=&format=1'
     info_number=requests.get(api.format(ddd + number)).text
 
     rm_symb_1=info_number.replace("{", "")
