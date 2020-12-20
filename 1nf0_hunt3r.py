@@ -13,7 +13,7 @@ def menu():
 
 {Fore.LIGHTRED_EX}          ╔═════════════════════════╗
           ║{Fore.LIGHTWHITE_EX} Tool Created by Mr Empy {Fore.LIGHTRED_EX}║
-          ║{Fore.LIGHTWHITE_EX} Version 2.1             {Fore.LIGHTRED_EX}║
+          ║{Fore.LIGHTWHITE_EX} Version 2.2             {Fore.LIGHTRED_EX}║
           ╚═════════════════════════╝
 {Fore.LIGHTWHITE_EX}https://youtube.co/channel/UCol7qlIUc0o0JKmdrmTWQtA
 
