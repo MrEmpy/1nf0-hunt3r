@@ -263,7 +263,7 @@ def custom_dork():
 def number_info():
     ddd = input('Country (ex: +55) (without +): ')
     number = input('Number (with DDD): ')
-    api = f'http://apilayer.net/api/validate?access_key=fe5a598969ac2813a2d63ec3cf4f14d2&number={ddd}{number}&country_code=&format=1'
+    api = f'http://apilayer.net/api/validate?access_key=c38a73e8ce41dcee3768965af513192b&number={ddd}{number}&country_code=&format=1'
     info_number=requests.get(api.format(ddd + number)).text
 
     rm_symb_1=info_number.replace("{", "")
